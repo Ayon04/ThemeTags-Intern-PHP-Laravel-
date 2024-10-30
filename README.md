@@ -1,9 +1,5 @@
 # ThemeTags-Intern-Laravel-
-Laravel Routes 
-
-# Laravel Suppors many types of Routing 
-# 1st start with basic routing there are some routes they are call basics route 
-
+Laravel Routes :
 
 # what is route/routing :
 
@@ -31,11 +27,11 @@ The routes/web.php file defines routes that are for your web interface.
 
   
 </p>
-s
-dsafsfsd
-f
-sdf
-sdf
-sd
 
 
+
+
+<h3># Laravel Suppors many types of Routing 
+ 1st start with basic routing there are some routes they are call basics route 
+
+</h3>
