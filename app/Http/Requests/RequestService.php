@@ -23,10 +23,10 @@ class RequestService extends FormRequest {
 
 
         return [
-            'name'     => 'required | string  | max: 50 | alpha',
-            'username' => 'required |alpha_num| min:6  | max :10 ',
-            'mobile'   => 'required |numeric  | min:11  |regex:/(01)[0-9]{9}/',
-            'email'    => 'required | email',
+            'name'     => 'required | string |min:3 |regex:/^[\pL\s]+$/u | max: 50 ',
+            'username' => 'required |alpha_num| min:6  | max :10 |unique:student_details',
+            'mobile'   => 'required |numeric  | min:11  |regex:/(01)[0-9]{9}/ |unique:student_details',
+            'email'    => 'required | email | unique:student_details' ,
             'password' => 'required | alpha_num | min:4 | max:10 '
         ];
     }

@@ -4,15 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create User</title>
+    <title>Update User</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
 <body>
-
-      
-  
-    <h1>Create Student</h1>
+    <h1>Update Student</h1>
   
     @if(session()->has('message'))
     <div class="alert alert-success">
@@ -20,20 +17,22 @@
     </div>
     @endif
 
-    <form action="{{route('new_student_create')}}"  method="POST" >
+    <form action="{{route('student_data_update')}}" method="GET"  >
+       {{-- {{ @csrf_field() }}  --}}
+       @method('PUT')
+        <div>
+            <label for="name">Student ID:</label>
+            <input type="text" id="name" name="name"  value="" readonly >
 
-        @csrf     
+        </div><br>
         <div>
             <label for="name">Name:</label>
             <input type="text" id="name" name="name"  value="{{ Request::old('name') }}" >
 
             @error('name')
             <span class="text-danger">{{ $message }}</span>
-            @enderror
-
-            
+            @enderror 
         </div><br>
-
 
         <div>
             <label for="username">Username:</label>
@@ -61,8 +60,6 @@
             <span class="text-danger">{{ $message }}</span>
             @enderror
         </div><br>
-
-
         <div>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password"  value="{{ Request::old('password') }}" >
@@ -71,10 +68,8 @@
             <span class="text-danger">{{ $message }}</span>
             @enderror
         </div><br>
-
-
         <div>
-            <button class="btn btn-primary" type="submit"> Submit</button>
+            <button class="btn btn-primary" type="submit">Update</button>
         </div>
     </form>
 

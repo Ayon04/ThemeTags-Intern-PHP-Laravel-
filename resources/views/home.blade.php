@@ -10,6 +10,9 @@
     <h1>Home</h1>
 
     <a href="student_form" >Student form</a>
+    <br>
+
+    <a href="student_view" >Student's Records</a>
 
 </body>
 </html>

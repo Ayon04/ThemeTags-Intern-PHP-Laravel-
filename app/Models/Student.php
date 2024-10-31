@@ -9,12 +9,18 @@ class Student extends Model
 {
     use HasFactory;
     
-    public $name;
-    public $username;
-    public $mobile;
-    public $email;
-    public $password;
+    protected $table = 'student_details';
+	public $timestamps =false;
+    protected $primaryKey = 'student_id';
 
+	/**
+	 * The attributes that are mass assignable.
+	 *
+	 * @var array
+	 */
+	protected $fillable = [
+		'first_name', 'last_name','city_name', 'email',
+	];
     
 
 }
