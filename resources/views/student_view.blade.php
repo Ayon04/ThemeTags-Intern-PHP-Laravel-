@@ -37,7 +37,7 @@
                 <td>{{$students->name}}</td>
                 <td>{{$students->mobile}}</td>
                 <td>{{$students->email}}</td>
-                <td><button class="btn btn-dark"> <a href="student_update_form" >update</a>  </button></td>
+                <td><button class="btn btn-dark"> <a href ={{"update/".$students['student_id']}} >update</a>  </button></td>
              
                 {{-- <td><button {{ action('StudentController', ['student_id'=>$students]) }} class="btn btn-danger">Delete</button></td> --}}
                 

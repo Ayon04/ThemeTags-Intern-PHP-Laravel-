@@ -17,7 +17,7 @@
     </div>
     @endif
 
-    <form action="{{route('student_data_update')}}" method="GET"  >
+    <form action="{{route('student_data_update')}}" method="POST"  >
        {{-- {{ @csrf_field() }}  --}}
        @method('PUT')
         <div>

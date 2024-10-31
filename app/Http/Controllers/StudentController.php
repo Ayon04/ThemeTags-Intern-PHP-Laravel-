@@ -22,7 +22,7 @@ class StudentController extends Controller
 
 
     public function updateForm(){
-   
+        
 
         return view('student_update_form');
 
