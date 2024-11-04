@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
  
 
 
-class RequestService extends FormRequest {
+class UpdateRequest extends FormRequest {
 
     
     public function authorize(): bool {
